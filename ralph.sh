@@ -10,8 +10,7 @@ COMPLETE="<promise>COMPLETE</promise>"
 
 for ((i=1; i<=$1; i++)); do
   result=$(docker sandbox run claude \
-    --model sonnet \
-    -p "$(cat prompt.md)\nIf the PRD is complete, output $(COMPLETE)."
+    -p "$(cat prompt.md)\nIf all issues are complete, output $(COMPLETE)."
   )
 
   echo "$result"
