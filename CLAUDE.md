@@ -1,10 +1,14 @@
 # Agent Instructions
 
-This project uses **bd** (beads) for issue tracking. Run `bd onboard` to get started.
+## Commit messages
 
 Follow the existing commit naming convention.
 
-## Quick Reference
+## Issue tracking
+
+This project uses **bd** (beads) for issue tracking. Run `bd onboard` to get started.
+
+### Quick Reference
 
 ```bash
 bd ready              # Find available work
