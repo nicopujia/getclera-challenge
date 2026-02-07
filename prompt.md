@@ -1,6 +1,4 @@
-@progress.txt
-
-1. Read issues and progress.
+1. Read bd issues and @progress.txt
 2. Find the highest-priority task and implement it.
 3. Run your tests and type checks.
 4. Update issues with what was done.
