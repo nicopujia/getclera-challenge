@@ -359,8 +359,14 @@ inspector_port = 8083
 # The Deno major version to use.
 deno_version = 2
 
+# SurrealDB env vars are read by _shared/surrealdb.ts with defaults for local dev.
+# To override, set these in your shell or .env file before running `supabase functions serve`.
 # [edge_runtime.secrets]
-# secret_key = "env(SECRET_VALUE)"
+# SURREALDB_URL = "env(SURREALDB_URL)"
+# SURREALDB_USER = "env(SURREALDB_USER)"
+# SURREALDB_PASS = "env(SURREALDB_PASS)"
+# SURREALDB_NS = "env(SURREALDB_NS)"
+# SURREALDB_DB = "env(SURREALDB_DB)"
 
 [analytics]
 enabled = false
