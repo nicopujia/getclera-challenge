@@ -7,11 +7,10 @@ settings:
 importers:
 
   .:
-    dependencies:
+    devDependencies:
       beads:
         specifier: ^0.2.1
         version: 0.2.1
-    devDependencies:
       supabase:
         specifier: ^2.23.4
         version: 2.71.0
