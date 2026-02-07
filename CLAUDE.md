@@ -18,6 +18,10 @@ bd close <id>         # Complete work
 bd sync               # Sync with git
 ```
 
+### Convention
+
+Issues should be **atomic**. That means that each issue should represent a single, self-contained task that can be completed independently. For bigger tasks, create multiple, related issues.
+
 ## Browser Automation
 
 Use `agent-browser` for web automation in frontend tasks. Run `agent-browser --help` for all commands.
@@ -28,7 +32,7 @@ Core workflow:
 3. `agent-browser click @e1` / `fill @e2 "text"` - Interact using refs
 4. Re-snapshot after page changes
 
-## Landing the Plane (Session Completion)
+## Session Completion
 
 **When ending a work session**, you MUST complete ALL steps below. Work is NOT complete until `git push` succeeds.
 

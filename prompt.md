@@ -10,5 +10,6 @@
       
       Keep entries concise. Sacrifice grammar for the sake of concision. This file helps future iterations skip exploration.
 6. Commit and push your changes.
+7. If, during the process, you find a new issue that needs to be addressed, create all you might need.
 
 ONLY WORK ON A SINGLE TASK.
