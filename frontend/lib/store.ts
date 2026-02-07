@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
+import type { Fruit } from "./fruit";
 
 // =============================================================================
 // ⚠️  DISCLAIMER
@@ -47,6 +48,7 @@ export interface Conversation {
   id: string;
   type: "apple" | "orange";
   fruitId: string;
+  fruit?: Fruit;
   messages: ConversationMessage[];
   status: "active" | "completed" | "error";
   createdAt: Date;

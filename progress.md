@@ -47,3 +47,33 @@ Key decisions:
 
 Files changed: docker-compose.yml (new), supabase/functions/_shared/surrealdb.ts (new), scripts/seed-surrealdb.ts (new), .env.example (new), package.json, supabase/config.toml
 Blockers: Docker daemon not running in agent env, no Deno runtime — couldn't test seed script execution. Code is ready for user to run.
+
+## Iteration 3 - 2026-02-07
+
+Task: clera-5a5 - Build conversation visualization UI
+Status: CLOSED
+
+Built chat-like conversation visualization as a client component. Users click "+ Apple" or "+ Orange" to generate a fruit, which then "speaks" its attributes and preferences as chat bubbles. A profile summary card shows structured data.
+
+Key decisions:
+- Ported `generateFruit.ts` to `frontend/lib/fruit.ts` (pure JS, no Deno deps) — enables client-side fruit generation for demo without needing edge fn calls
+- Chat UI with split panel: sidebar (conversation list) + main area (messages)
+- Messages: system announcement, fruit attributes (natural language), fruit preferences (natural language), profile summary card
+- Conversations persist via Zustand persist middleware (localStorage)
+- Added `fruit?: Fruit` field to `Conversation` type in store for structured data display
+- Set up vitest + @testing-library/react testing infrastructure (TDD per CLAUDE.md)
+
+Files changed:
+- frontend/lib/fruit.ts (new) — types + generation + communication functions
+- frontend/app/dashboard/ConversationPanel.tsx (new) — chat UI client component
+- frontend/lib/store.ts — added Fruit import + optional fruit field on Conversation
+- frontend/app/dashboard/page.tsx — replaced visualization placeholder with ConversationPanel
+- frontend/vitest.config.ts (new) — vitest config with jsdom + react plugin
+- frontend/vitest.setup.ts (new) — testing-library/jest-dom setup
+- frontend/lib/__tests__/fruit.test.ts (new) — 14 tests for fruit generation/communication
+- frontend/lib/__tests__/store.test.ts (new) — 7 tests for store actions
+- frontend/app/dashboard/__tests__/ConversationPanel.test.tsx (new) — 8 tests for component
+- frontend/package.json — added test deps (vitest, testing-library, jsdom), test scripts, platform-specific build deps
+
+Tests: 29 passing (3 test files). Build: passing. Lint: clean.
+Blockers: None. Next up: clera-5a2 (store fruits from edge fns) or clera-5a4 (LLM communication).

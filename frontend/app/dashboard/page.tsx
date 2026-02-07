@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { getDashboardData } from "./loader";
+import ConversationPanel from "./ConversationPanel";
 
 // =============================================================================
 // ⚠️  DISCLAIMER
@@ -176,28 +177,12 @@ export default function DashboardPage() {
           </Suspense>
         </section>
 
-        {/* Visualization Section */}
+        {/* Conversation Visualization */}
         <section className="mb-8">
           <h2 className="mb-4 text-lg font-semibold">
-            Matchmaking Visualization
+            Matchmaking Conversations
           </h2>
-          <ScaffoldNote>
-            <strong>Build whatever visualization makes sense for your solution!</strong>{" "}
-            This could be a chat interface, a network graph, a timeline, an
-            animation - get creative and show off your approach.
-          </ScaffoldNote>
-          <div className="card min-h-[400px]">
-            <div className="flex h-full items-center justify-center text-muted">
-              <div className="text-center">
-                <p className="text-4xl">🎯</p>
-                <p className="mt-4 text-lg font-medium">Visualization Area</p>
-                <p className="mt-2 max-w-md text-sm">
-                  Replace this with your own visualization. The README mentions
-                  &quot;you may choose the medium&quot; - so be creative!
-                </p>
-              </div>
-            </div>
-          </div>
+          <ConversationPanel />
         </section>
 
         {/* Recent Matches Section */}
