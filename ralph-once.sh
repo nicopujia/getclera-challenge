@@ -1,3 +1,3 @@
 #!/bin/bash
 
-claude --permission-mode acceptEdits -p $(cat prompt.md)
+docker sandbox run claude -p "$(cat prompt.md)"
