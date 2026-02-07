@@ -9,6 +9,6 @@
     - Any blockers or notes for next iteration
       
       Keep entries concise. Sacrifice grammar for the sake of concision. This file helps future iterations skip exploration.
-6. Commit your changes.
+6. Commit and push your changes.
 
 ONLY WORK ON A SINGLE TASK.
