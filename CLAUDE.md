@@ -1,8 +1,12 @@
 # Agent Instructions
 
+## Development technique
+
+Follow Test-Driven Development (TDD) principles.
+
 ## Commit messages
 
-Follow the existing commit naming convention.
+Follow the existing commit naming convention: `<Type>: <description> (<issue_id>)`.
 
 ## Issue tracking
 
